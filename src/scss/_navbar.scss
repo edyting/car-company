@@ -1,0 +1,41 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100dvw;
+    background-color: gray;
+    padding: 20px 25px ;
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: sans-serif;
+
+    &_links{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        font-size: 1.2rem;
+
+
+        li a{
+            text-decoration: none;
+            color: white; 
+            &:hover{
+                color: #a1b358;
+            }
+        }
+    }
+
+
+
+    &_logo{
+        font-size: 2rem;
+    }
+
+    &_btn{
+        padding: 6px 10px;
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+    }
+}
