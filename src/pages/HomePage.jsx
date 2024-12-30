@@ -1,3 +1,4 @@
+import Forth from "../components/Forth";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar"
 import Search from "../components/Search";
@@ -25,6 +26,10 @@ const HomePage = () => {
         
         <div className="">
           <ThirdSection/>
+        </div>
+
+        <div className="">
+          <Forth/>
         </div>
       </div>
     </div>

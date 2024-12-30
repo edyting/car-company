@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="nav">
         {/* menu-icon */}
         <div className="humburger">
-          <FaBars />
+          <FaBars className="hum" />
         </div>
         {/* links-first 3 */}
         <div>
