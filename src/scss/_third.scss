@@ -1,0 +1,23 @@
+.third{
+    width: 100%;
+    height: 60dvh;
+    // background: green;
+
+    &_small{
+        color: $primary-color;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    &_large{
+        text-align: center;
+        font-size: 2rem;
+        padding-top: .3rem;
+        padding-bottom: .5rem;
+    }
+    &_paragraph{
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        font-size: .9rem;
+    }
+}

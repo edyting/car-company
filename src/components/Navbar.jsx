@@ -1,24 +1,31 @@
-
+import { FaBars } from "react-icons/fa6";
+import { FaAngleDown } from "react-icons/fa6";
 const Navbar = () => {
   return (
     <div>
       <div className="nav">
         {/* menu-icon */}
-        <div className="humburger"></div>
+        <div className="humburger">
+          <FaBars />
+        </div>
         {/* links-first 3 */}
         <div>
-          <ul className="nav_links">
+          <ul className="nav_links ">
             <li>
-              <a href="#!">Home</a>
+              <a className="active" href="#!">
+                Home
+              </a>
             </li>
             <li>
               <a href="#!">About</a>
             </li>
             <li>
-              <a href="#!">
-                Pages
+              <a href="#!" className="with_dropdown">
+                <span>Pages</span>
                 {/* drop-down-icon */}
-                <div className="drop_down_icon"></div>
+                <span className="drop_down_icon">
+                  <FaAngleDown />
+                </span>
               </a>
             </li>
           </ul>
@@ -42,12 +49,12 @@ const Navbar = () => {
           </ul>
         </div>
         {/* buy a car button */}
-        <div >
+        <div>
           <button className="nav_btn">Buy a Car</button>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
