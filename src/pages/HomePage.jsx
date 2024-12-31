@@ -1,11 +1,12 @@
 import BuyYourCar from "../components/BuyYourCar";
+import BuyYourCarSection from "../components/BuyYourCarSection";
 import CarListing from "../components/CarListing";
 import Forth from "../components/Forth";
 import HeroSection from "../components/HeroSection";
-import HowToBuy from "../components/HowToBuy";
 import Navbar from "../components/Navbar"
 import Search from "../components/Search";
 import SecondSection from "../components/SecondSection";
+import TestimonialSection from "../components/TestimonialSection";
 import ThirdSection from "../components/ThirdSection";
 import WhyChooseUS from "../components/WhyChooseUS";
 
@@ -49,7 +50,11 @@ const HomePage = () => {
         </div>
 
         <div className="">
-          <HowToBuy />
+          <BuyYourCarSection/>
+        </div>
+
+        <div className="">
+          <TestimonialSection/>
         </div>
       </div>
     </div>

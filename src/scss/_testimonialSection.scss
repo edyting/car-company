@@ -1,0 +1,24 @@
+.testimonial{
+    width: 100%;
+    height: 75dvh;
+    background:
+    linear-gradient(
+        to right,
+        rgb(0,0,0,0.9),
+        rgb(0,0,0,0.6),
+    )
+    ,url('../../public/carinterior.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_card_container{
+        width: 80%;
+        height: 80%;
+        background:#1e212e ;
+    }
+}
