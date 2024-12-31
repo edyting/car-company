@@ -5,6 +5,7 @@ import Collaborators from "../components/Collaborators";
 import Forth from "../components/Forth";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar"
+import News from "../components/News";
 import Search from "../components/Search";
 import SecondSection from "../components/SecondSection";
 import TestimonialSection from "../components/TestimonialSection";
@@ -59,6 +60,9 @@ const HomePage = () => {
         </div>
         <div className="">
           <Collaborators/>
+        </div>
+        <div className="">
+          <News/>
         </div>
       </div>
     </div>
