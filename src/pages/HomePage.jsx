@@ -2,6 +2,7 @@ import BuyYourCar from "../components/BuyYourCar";
 import CarListing from "../components/CarListing";
 import Forth from "../components/Forth";
 import HeroSection from "../components/HeroSection";
+import HowToBuy from "../components/HowToBuy";
 import Navbar from "../components/Navbar"
 import Search from "../components/Search";
 import SecondSection from "../components/SecondSection";
@@ -21,30 +22,34 @@ const HomePage = () => {
 
         <div className="">
           <Search />
-              </div>
-              
-              <div className="">
-                  <SecondSection/>
         </div>
-        
+        {/* second section is just a white space */}
         <div className="">
-          <ThirdSection/>
+          <SecondSection />
         </div>
 
         <div className="">
-          <Forth/>
+          <ThirdSection />
         </div>
 
         <div className="">
-          <WhyChooseUS/>
+          <Forth />
         </div>
 
         <div className="">
-          <BuyYourCar/>
+          <WhyChooseUS />
         </div>
 
         <div className="">
-          <CarListing/>
+          <BuyYourCar />
+        </div>
+
+        <div className="">
+          <CarListing />
+        </div>
+
+        <div className="">
+          <HowToBuy />
         </div>
       </div>
     </div>
