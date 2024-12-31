@@ -1,5 +1,62 @@
 .news{
     width: 100%;
-    height: 80dvh;
+    height: 110dvh;
     background: $grey;
+    .top{
+        display: flex;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        padding-top: 3rem;
+
+        .text{
+            p{
+                color: $primary-color;
+                padding-bottom: .7rem;
+            }
+            h2{
+                font-size: 2rem;
+            }   
+        }
+
+        .link{
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: $primary-color;
+            }
+    }
+
+    .bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90%;
+        gap: 2%;
+        margin: 0 auto;
+
+        .news_card{
+            width: 100%;
+
+            img{
+                width: 100%;
+                height: 80%;
+            }
+            .heading{
+                text-transform: capitalize;
+                padding: .7rem 0;
+                font-size: .8rem;
+            }
+            .text{
+                font-size: .8rem;
+                color: slategray;
+                padding: .4rem 0;
+            }
+            .date{
+                font-size: .7rem;
+                color: slategray;
+            }
+        }
+    }
 }
