@@ -1,0 +1,46 @@
+.get-started{
+    width: 100%;
+    height: 90dvh;
+    background: linear-gradient(to right, rgb(0,0,0,0.9),rgb(0,0,0,0.6)),url('../../public/get.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+     align-items: center;
+     padding-left: 5%;
+    .text{
+        width: 40%;
+        // background: green;
+
+        .heading{
+              display: flex;
+        flex-direction: column;
+
+        p{
+            color: $primary-color;
+            font-size: 1.1rem;
+            padding: .5rem 0;
+        }
+
+        h2{
+            font-size: 2.2rem;
+            padding: .7rem 0;
+            color: white;
+        }
+
+        span{
+            font-size: .8rem;
+            font-weight: 300;
+            color: slategray;
+            padding: .6rem 0;
+        }
+
+        button{
+            width: 25%;
+            padding: .4rem .9rem;
+            border: none;
+            background: $primary-color;
+        }
+        }
+    }
+}

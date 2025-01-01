@@ -6,7 +6,7 @@ const News = () => {
         heading: "mystery chevy compact suv spied, might slot below equinox",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus totam asperiores a soluta modi consequuntur harum voluptatum omnis repudiandae!",
         date: "puriwp . March 12,2022",
-        src: "../../public/pexels-brettjordan-842528.jpg",
+        src: "../../public/pexels-tinchflicks-29112761.jpg",
       },
       {
         id: 2,
@@ -18,10 +18,11 @@ const News = () => {
       },
       {
         id: 3,
-        heading: "musk's plan for tesla-built batteries has an acceleration challenge",
+        heading:
+          "musk's plan for tesla-built batteries has an acceleration challenge",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam doloribus totam asperiores a soluta modi consequuntur harum voluptatum omnis repudiandae!",
         date: "puriwp . March 12,2022",
-        src: "../../public/pexels-vladimirsrajber-21407450.jpg",
+        src: "../../public/pexels-tinchflicks-29112761.jpg",
       },
     ];
   return (

@@ -3,6 +3,7 @@ import BuyYourCarSection from "../components/BuyYourCarSection";
 import CarListing from "../components/CarListing";
 import Collaborators from "../components/Collaborators";
 import Forth from "../components/Forth";
+import GetStartedSection from "../components/GetStartedSection";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar"
 import News from "../components/News";
@@ -63,6 +64,9 @@ const HomePage = () => {
         </div>
         <div className="">
           <News/>
+        </div>
+        <div className="">
+          <GetStartedSection/>
         </div>
       </div>
     </div>
