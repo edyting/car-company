@@ -2,6 +2,7 @@ import BuyYourCar from "../components/BuyYourCar";
 import BuyYourCarSection from "../components/BuyYourCarSection";
 import CarListing from "../components/CarListing";
 import Collaborators from "../components/Collaborators";
+import Footer from "../components/Footer";
 import Forth from "../components/Forth";
 import GetStartedSection from "../components/GetStartedSection";
 import HeroSection from "../components/HeroSection";
@@ -67,6 +68,10 @@ const HomePage = () => {
         </div>
         <div className="">
           <GetStartedSection/>
+        </div>
+
+        <div className="">
+          <Footer/>
         </div>
       </div>
     </div>
