@@ -87,7 +87,7 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        background: #0e0d0d;
+        background: #111111;
         padding: 1.5% 5%;
         margin-top: 2%;
 
@@ -127,6 +127,21 @@
                 color: $primary-color;
             }
            }
+        }
+    }
+
+    &_end{
+        color: slategray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+        font-size: .7rem;
+
+        &_right{
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     }
 }

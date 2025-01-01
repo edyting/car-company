@@ -84,8 +84,14 @@ const Footer = () => {
         </div>
 
         <div className="footer_end">
-          <div className="footer_end_left"></div>
-          <div className="footer_end_right"></div>
+                  <div className="footer_end_left">
+                      &copy; 2024-Envalab.com. All Right Reserved
+          </div>
+                  <div className="footer_end_right">
+                      <p>Privacy Policy</p>
+                      <p>Terms Of Services</p>
+                      <p>Cookies</p>
+          </div>
         </div>
       </div>
     </div>
