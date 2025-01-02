@@ -20,3 +20,30 @@
         }
     }
 }
+
+// mobile
+@include mobile{
+    .collaborators_container{
+        width: 100%;
+        height: 15dvh;
+        // background: blue;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        overflow-wrap: normal;
+        gap: 3%;
+    
+        .top{
+            font-size: 1rem;
+            text-transform: capitalize;
+        }
+        .bottom{
+            width: 95%;
+            // overflow: hidden;
+            img{
+                width: 90%;
+            }
+        }
+    }
+}

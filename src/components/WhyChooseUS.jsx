@@ -28,7 +28,7 @@ const WhyChooseUS = () => {
         {/* right */}
         <div className="right">
           <div className="items-container" id="container">
-            {/* items */}
+            {/* items */} 
             <div className="item1">
               {/* icon */}
               <div className="icon">

@@ -66,3 +66,75 @@
         }
     }
 }
+
+
+@include mobile{
+    .news{
+        width: 100%;
+        height: 105dvh;
+        background: $grey;
+        .top{
+            display: flex;
+            width: 90%;
+            align-items: center;
+            margin: 0 auto;
+            justify-content: space-between;
+            padding-top: 1rem;
+    
+            .text{
+                p{
+                    color: $primary-color;
+                    padding-bottom: .7rem;
+                }
+                h2{
+                    font-size: 1.5rem;
+                }   
+            }
+    
+            .link{
+                    font-size: .8rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: $primary-color;
+    
+                    &:hover{
+                        background: $primary-color;
+                        color: white;
+                        padding: .3rem .7rem;
+                    }
+                }
+        }
+    
+        .bottom{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 90%;
+            gap: 2%;
+            margin: 0 auto;
+    
+            .news_card{
+                width: 100%;
+    
+                img{
+                    width: 100%;
+                    // height: 80%;/
+                }
+                .heading{
+                    text-transform: capitalize;
+                    padding: .2rem 0;
+                    font-size: .7rem;
+                }
+                .text{
+                    font-size: .6rem;
+                    color: slategray;
+                    padding: .2rem 0;
+                }
+                .date{
+                    font-size: .6rem;
+                    color: slategray;
+                }
+            }
+        }
+    }
+}

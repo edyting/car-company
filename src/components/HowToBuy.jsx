@@ -18,7 +18,7 @@ const HowToBuy = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 

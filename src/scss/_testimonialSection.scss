@@ -121,3 +121,132 @@
         }
     }
 }
+
+
+
+@include mobile{
+    .testimonial{
+        width: 100%;
+        height: 70dvh;
+        padding-top: .5rem;
+        background:
+        linear-gradient(
+            to right,
+            rgb(0,0,0,0.9),
+            rgb(0,0,0,0.6),
+        )
+        ,url('../../public/carinterior.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &_card_container{
+            width: 90%;
+            height: 80%;
+            background: $grey-blue ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            column-gap: .4%;
+    
+            .circle{
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background: $primary-color;
+                border-radius: 50%;
+                top: 0;
+                left: 20px;
+                margin-top: -35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                color: white;
+            }
+    
+            .left{
+                width: 35%;
+                // background: brown;
+                padding-left: 3%;
+    
+                p{
+                    color: $primary-color;
+                    padding: 2% 0;
+                    font-size: .8rem;
+                }
+                h2{
+                    color: white;
+                    text-transform: capitalize;
+                    font-size: 1.5rem;
+                }
+    
+                span{
+                    font-size: 0.6rem;
+                    color: slategray;
+                }
+            }
+            .right{
+                // background: green;
+                width: 70%;
+                position: relative;
+    
+                .right_absolute{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                position: absolute;
+                border-top: 3px solid $primary-color;
+                width: 100%;
+                top: -9rem;
+                left: 1rem;
+                gap: 1%;
+    
+                .card{
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    .img{
+                        width: 90%;
+                        margin: 0 auto;
+                        padding: 6% 0;
+                        img{
+                            width: 100%;
+                            height: 8rem;
+                            
+                        }
+                    }
+    
+                    .about{
+                        font-size: 0.6rem;
+                        padding: 10% 0;
+                        width: 80%;
+                        margin: 0 auto;
+                         color: slategray;
+                    }
+    
+                    .text{
+                        font-size: .9rem;
+                        color: $primary-color;
+                        padding: 3% 0;
+                    }
+    
+                    .title{
+                        text-transform: capitalize;
+                        padding: 3% 0;
+                        font-size: .7rem;
+                        color: slategray;
+                    }
+                }
+            }
+            }
+        }
+    }
+}

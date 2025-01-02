@@ -60,3 +60,74 @@
         }
     }
 }
+
+
+@include mobile{
+    .third{
+        width: 100%;
+        height: 40dvh;
+        // background: green;
+
+    
+        &_small{
+            color: $primary-color;
+            font-size: 1rem;
+            text-align: center;
+        }
+        &_large{
+            text-align: start;
+            margin: 0 auto;
+            width: 90%;
+            font-size: 1.5rem;
+            padding-top: .3rem;
+            padding-bottom: .5rem;
+        }
+        &_paragraph{
+            text-align: start;
+            margin: 0 auto;
+            width: 90%;
+            margin: 0 auto;
+            font-size: .8rem;
+        }
+    
+        &_images{
+            width: 90%;
+            // background: blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: .5rem auto;
+    
+            &_car{
+                img{
+                    width: 9rem;
+                    // background: yellow;
+    
+                }
+    
+                &_circle {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+    
+                    div{
+                    width: 8px;
+                    height: 8px;
+                    border: 1px solid $primary-color;
+                    border-radius: 50%;
+    
+                    &.active{
+                        background: $primary-color;
+                    }
+                    &:hover{
+                         background: $primary-color;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
