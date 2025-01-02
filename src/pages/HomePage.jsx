@@ -1,3 +1,4 @@
+import AllCarSection from "../components/AllCarSection";
 import BuyYourCar from "../components/BuyYourCar";
 import BuyYourCarSection from "../components/BuyYourCarSection";
 import CarListing from "../components/CarListing";
@@ -11,7 +12,6 @@ import News from "../components/News";
 import Search from "../components/Search";
 import SecondSection from "../components/SecondSection";
 import TestimonialSection from "../components/TestimonialSection";
-import ThirdSection from "../components/ThirdSection";
 import WhyChooseUS from "../components/WhyChooseUS";
 
 const HomePage = () => {
@@ -34,7 +34,7 @@ const HomePage = () => {
         </div>
 
         <div className="">
-          <ThirdSection />
+          <AllCarSection/>
         </div>
 
         <div className="">
