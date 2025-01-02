@@ -1,0 +1,28 @@
+@import '../homepageSections/allcarsection';
+@import '../homepageSections/buycar';
+@import '../homepageSections/collaborators';
+@import '../homepageSections/footer';
+@import '../homepageSections/getstarted';
+@import '../homepageSections/hero-section';
+@import '../homepageSections/navbar';
+@import '../homepageSections/news';
+@import '../homepageSections/ratingsection';
+@import '../homepageSections/search';
+@import '../homepageSections/second';
+@import '../homepageSections/testimonialSection';
+@import '../homepageSections/tobuy';
+@import '../homepageSections/whychooseus';
+@import '../homepageSections/carlisting.scss';
+
+
+
+
+.container{
+    position: relative;
+}
+
+@include mobile{
+    .container{
+        position: absolute;
+    }
+}

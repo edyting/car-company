@@ -1,9 +1,0 @@
-.container{
-    position: relative;
-}
-
-@include mobile{
-    .container{
-        position: absolute;
-    }
-}

@@ -87,6 +87,10 @@
     }
 }
 
+.listing-carousel-container{
+    display: none;
+}
+
 
 @include mobile{
     .car-listing-section{
@@ -187,6 +191,7 @@
 
     // carousel
     .listing-carousel-container{
+        display: block;
         width: 100%;
         height: auto;
         // background: yellow;

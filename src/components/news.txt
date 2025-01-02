@@ -1,0 +1,23 @@
+ <Swiper
+            className="bottom"
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={10}
+            slidesPerView={1}
+            // navigation
+            pagination={{ clickable: true }}
+          
+          >
+            {news.map((news) => (
+              <SwiperSlide className="news_card" key={news.id}>
+                <img src={news.src} alt={news.heading} />
+                <div className="heading">
+                  <h2>{news.heading}</h2>
+                </div>
+                <div className="text">{news.text}</div>
+                <div className="date">
+                  <p>{news.date}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
