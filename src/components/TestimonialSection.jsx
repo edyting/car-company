@@ -1,7 +1,7 @@
 import { FaQuoteLeft } from "react-icons/fa";
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Autoplay,Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -76,9 +76,13 @@ const TestimonialSection = () => {
           {/* carousel */}
           <Swiper
             // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
             // navigation
             pagination={{ clickable: true }}
             className="testimonial-carousel"

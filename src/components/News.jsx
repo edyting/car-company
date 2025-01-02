@@ -1,4 +1,13 @@
 import { FaArrowRightLong } from "react-icons/fa6";
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css/bundle';
+
 const News = () => {
     const news = [
       {
@@ -8,7 +17,7 @@ const News = () => {
         date: "puriwp . March 12,2022",
         src: "../../public/pexels-tinchflicks-29112761.jpg",
       },
-      {
+      { 
         id: 2,
         heading:
           "2023 Audi E-Tron drifting through winter tuning and calibration",
@@ -38,24 +47,31 @@ const News = () => {
           </div>
         </div>
         <div className="bottom">
-          {news.map((news) => (
-            <div className="news_card" key={news.id}>
-              <img src={news.src} alt={news.heading} />
-              <div className="heading">
-                <h2>
-                 {news.heading}
-                </h2>
-                  </div>
-                  <div className="text">
-                      {news.text}
-                  </div>
-                  <div className="date">
-                      <p>
-                          {news.date}
-                      </p>
-                  </div>
-            </div>
-          ))}
+          <Swiper
+            className="bottom"
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={10}
+            slidesPerView={1}
+            // navigation
+            pagination={{ clickable: true }}
+            // scrollbar={{ draggable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+          >
+            {news.map((news) => (
+              <SwiperSlide className="news_card" key={news.id}>
+                <img src={news.src} alt={news.heading} />
+                <div className="heading">
+                  <h2>{news.heading}</h2>
+                </div>
+                <div className="text">{news.text}</div>
+                <div className="date">
+                  <p>{news.date}</p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </div>

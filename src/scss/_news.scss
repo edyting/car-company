@@ -71,8 +71,9 @@
 @include mobile{
     .news{
         width: 100%;
-        height: 105dvh;
+        height: auto;
         background: $grey;
+        padding: 5% 0;
         .top{
             display: flex;
             width: 90%;
@@ -84,15 +85,16 @@
             .text{
                 p{
                     color: $primary-color;
-                    padding-bottom: .7rem;
+                    padding-bottom: .3rem;
+                    font-size: 1.2rem;
                 }
                 h2{
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                 }   
             }
     
             .link{
-                    font-size: .8rem;
+                    font-size: 1.1rem;
                     display: flex;
                     align-items: center;
                     gap: 5px;
@@ -108,8 +110,9 @@
     
         .bottom{
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            width: 90%;
+            grid-template-columns: 1fr ;
+            width: 100%;
+            padding: 0 5%;
             gap: 2%;
             margin: 0 auto;
     
@@ -123,15 +126,17 @@
                 .heading{
                     text-transform: capitalize;
                     padding: .2rem 0;
-                    font-size: .7rem;
+                    font-size: 1.2rem;
                 }
                 .text{
-                    font-size: .6rem;
+                    font-size: 1rem;
                     color: slategray;
                     padding: .2rem 0;
                 }
                 .date{
-                    font-size: .6rem;
+                    font-size: .8rem;
+                    padding: 2% 0;
+                    margin-bottom: 10%;
                     color: slategray;
                 }
             }
