@@ -4,7 +4,7 @@ const HowToBuy = () => {
     <div>
       <div className="to_buy">
         {/* header */}
-        <div className="header">
+        <div className="header"> 
           <p>How to Buy</p>
         </div>
         <div className="flex-container">

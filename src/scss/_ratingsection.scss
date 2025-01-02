@@ -6,7 +6,7 @@
     align-items: center;
     gap: 4rem;
     justify-content: center;
-
+    margin-top: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
@@ -49,12 +49,12 @@
 @include mobile{
     .forth{
         width: 100%;
-        margin-top: 5rem;
+        // margin-top: 5rem;
         height: 20dvh;
         background: #d0dce4b3;
         display: flex;
         align-items: center;
-        gap: 1.7rem;
+        gap: .8rem;
         justify-content: center;
     
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -64,7 +64,7 @@
     .top{
         display: flex;
         align-items: center;
-        gap: .5rem;
+        gap: .2rem;
         
     
         span{

@@ -1,4 +1,13 @@
 import { FaQuoteLeft } from "react-icons/fa";
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css/bundle';
+
 const TestimonialSection = () => {
   const persons = [
     {
@@ -9,7 +18,7 @@ const TestimonialSection = () => {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore mollitia rem sunt fuga numquam similique.",
       src: "../../public/person1.jpg",
     },
-    {
+    { 
       id: 2,
       name: "John Doe",
       title: "content creator",
@@ -30,8 +39,8 @@ const TestimonialSection = () => {
     <div>
       <div className="testimonial">
         <div className="testimonial_card_container">
-                  <div className="circle">
-                      <FaQuoteLeft/>
+          <div className="circle">
+            <FaQuoteLeft />
           </div>
           <div className="left">
             <p>Testimonials</p>
@@ -63,6 +72,45 @@ const TestimonialSection = () => {
               ))}
             </div>
           </div>
+
+          {/* carousel */}
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            // navigation
+            pagination={{ clickable: true }}
+            className="testimonial-carousel"
+            // scrollbar={{ draggable: true }}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log('slide change')}
+          >
+            <div className="">
+              {persons.map((person) => (
+                <SwiperSlide
+                  className="testimonial-carousel-card"
+                  key={person.id}
+                >
+                  <div className="img">
+                    <img src={person.src} alt={person.name} />
+                  </div>
+                  <div className="text-side">
+                    <div className="about">
+                      <p>"{person.about}"</p>
+                    </div>
+                    <div className="text">
+                      <span>{person.name}</span>
+                    </div>
+                    <div className="title">
+                      <span>{person.title}</span>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </div>
+          </Swiper>
+          {/* end */}
         </div>
       </div>
     </div>

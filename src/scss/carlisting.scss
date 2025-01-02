@@ -1,6 +1,6 @@
 .car-listing-section{
     width: 100%;
-    
+    // background: blue;
     
 
     .top{
@@ -91,11 +91,12 @@
 @include mobile{
     .car-listing-section{
         width: 100%;
-        
+        height: auto;
+        // display: none;
         
     
         .top{
-           padding: 6% 0;
+           padding-top: 5%;
             display: block;
             text-align: center;
             width: 90%;
@@ -104,11 +105,11 @@
             p{
                 padding-bottom: 0%;
                 color: $primary-color;
-                font-size: .9rem;
+                font-size: 1.3rem;
             }
     
             h2{
-                font-size: 1.2rem;
+                font-size: 1.8rem;
             }
         }
     }
@@ -121,6 +122,7 @@
         grid-template-columns: 1fr 1fr;
         column-gap: 6%;
         padding: 0 5%;
+        display: none;
         
     
         img{
@@ -136,10 +138,10 @@
     .location{
         display: flex;
         color: slategrey;
-        margin-top: 10px;
+        // padding-top: 10%;
     
         span{
-            font-size: .8rem;
+            font-size: 1rem;
             
         }
     }
@@ -148,13 +150,16 @@
         display: flex;
         color: rgb(36, 36, 36);
         // align-items: center;
-        gap: 2%;
-        font-size: .8rem;
+        gap: 3%;
+        font-size: 1.1rem;
         padding-bottom: 2%;
+        // background: brown;
+        width: 100%;
+        justify-content: space-between;
     }
     
     .brand{
-        font-size: .75rem;
+        font-size: 1.1rem;
         margin: 2% 0;
         margin-bottom: 4%;
     }
@@ -168,14 +173,34 @@
     
         .price{
             font-weight: 600;
+            font-size: 1.4rem;
         }
     
         button{
             background: $primary-color;
             border: none;
-            padding: 2% 6%;
+            padding: 3% 10%;
             // font-size: 1.1rem;
             color: white;
+        }
+    }
+
+    // carousel
+    .listing-carousel-container{
+        width: 100%;
+        height: auto;
+        // background: yellow;
+        padding: 0 5%;
+        padding-bottom: 5%;
+    }
+
+    .tag,.date,.distance{
+        display: flex;
+        font-size: 1.2rem;
+        align-items: center;
+        // gap: 2%;
+        span{
+            margin-left: 5px;
         }
     }
 }

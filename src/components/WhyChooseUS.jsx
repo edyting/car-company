@@ -10,7 +10,7 @@ const WhyChooseUS = () => {
     <div>
       <div className="fifth">
         {/* left */}
-        <div className="left">
+        <div className="left"> 
           <div className="text">
             <p>Why Choose Us?</p>
             <h4>
@@ -29,7 +29,7 @@ const WhyChooseUS = () => {
         <div className="right">
           <div className="items-container" id="container">
             {/* items */} 
-            <div className="item1">
+            <div className="item">
               {/* icon */}
               <div className="icon">
                 <FaCar />
@@ -40,7 +40,7 @@ const WhyChooseUS = () => {
                 blanditiis. Eveniet expedita dolorum ut neque.
               </span>
             </div>
-            <div className="item2">
+            <div className="item">
               {/* icon */}
               <div className="icon">
                 <GrNotes />
@@ -51,7 +51,7 @@ const WhyChooseUS = () => {
                 blanditiis. Eveniet expedita dolorum ut neque.
               </span>
             </div>
-            <div className="item3">
+            <div className="item">
               {/* icon */}
               <div className="icon">
                 <IoIosChatboxes />
@@ -62,7 +62,7 @@ const WhyChooseUS = () => {
                 blanditiis. Eveniet expedita dolorum ut neque.
               </span>
             </div>
-            <div className="item4">
+            <div className="item">
               {/* icon */}
               <div className="icon">
                 <GiWallet />

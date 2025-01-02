@@ -50,40 +50,46 @@
 @include mobile{
     .buycar-container{
         width: 100%;
-        height: 20dvh;
-        background: #1e212e;
+        height: auto;
+        background: $grey-blue;
+        
         display: flex;
         justify-content: center;
         align-items: center;
+        
         color: white;
     
         .main{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 10%;
-            gap: 5%;
+            flex-direction: column;
+            padding: 5% 0%;
+            gap: 1%;
             .left{
-                width: 70%;
+                // width: 70%;
             h2{
                 text-transform: capitalize;
-                font-size: 1.2rem;
+                font-size: 1.7rem;
                 margin-bottom: 2%;
             }
             p{
-                font-size: .65rem;
+                font-size: .9rem;
                 color: #a3a3a3;
             }
         }
     
         .right{
-            width: 30%;
+            width: 100%;
+            text-align: center;
+            margin: 2% 0;
     
             button{
                 background: transparent;
                 border: 1px solid white;
-                padding: .5rem .5rem;
+                padding: 1rem 1rem;
                 color: white;
+                font-size: 1rem;
     
                 &:hover{
                   border: 1px solid $primary-color;

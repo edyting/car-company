@@ -109,6 +109,11 @@
     }
 }
 
+.swiper-button-next, .swiper-button-prev{
+    color: $primary-color;
+    font-size: 1.5rem;
+}
+
 @include mobile{
     .third{
         width: 100%;

@@ -127,8 +127,8 @@
 @include mobile{
     .testimonial{
         width: 100%;
-        height: 70dvh;
-        padding-top: .5rem;
+        height: auto;
+        padding: 5rem 0;
         background:
         linear-gradient(
             to right,
@@ -144,15 +144,19 @@
         align-items: center;
         justify-content: center;
     
+    
         &_card_container{
             width: 90%;
-            height: 80%;
+            padding: 2% 5%;
+            height: auto;
             background: $grey-blue ;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             column-gap: .4%;
+            padding-bottom: 5%;
+            flex-direction: column;
     
             .circle{
                 position: absolute;
@@ -171,82 +175,131 @@
             }
     
             .left{
-                width: 35%;
+                width: 100%;
                 // background: brown;
-                padding-left: 3%;
+                padding: 10% 0;
     
                 p{
                     color: $primary-color;
                     padding: 2% 0;
-                    font-size: .8rem;
+                    font-size: 1.1rem;
                 }
                 h2{
                     color: white;
                     text-transform: capitalize;
-                    font-size: 1.5rem;
+                    font-size: 2rem;
+                    padding-bottom: 2%;
                 }
     
                 span{
-                    font-size: 0.6rem;
+                    font-size: .9rem;
                     color: slategray;
                 }
             }
             .right{
                 // background: green;
-                width: 70%;
-                position: relative;
-    
-                .right_absolute{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                position: absolute;
-                border-top: 3px solid $primary-color;
                 width: 100%;
-                top: -9rem;
-                left: 1rem;
-                gap: 1%;
+                margin-top: 5%;
+                position: relative;
+                display: none;
     
-                .card{
-                    background: white;
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    .img{
-                        width: 90%;
-                        margin: 0 auto;
-                        padding: 6% 0;
-                        img{
-                            width: 100%;
-                            height: 8rem;
+            //     .right_absolute{
+            //     display: grid;
+            //     grid-template-columns: 1fr 1fr 1fr;
+            //     position: relative;
+            //     border-top: 3px solid $primary-color;
+            //     width: 100%;
+            //     top: 0rem;
+            //     left: 0rem;
+            //     gap: 1%;
+    
+            //     .card{
+            //         background: white;
+            //         display: flex;
+            //         flex-direction: column;
+            //         width: 100%;
+            //         height: 100%;
+            //         text-align: center;
+            //         .img{
+            //             width: 60%;
+            //             // aspect-ratio: 16/9;
+            //             // object-fit: cover;
+            //             margin: 0 auto;
+            //             padding: 6% 0;
+            //             img{
+            //                 width: 60%;
+            //                 height: 8rem;
                             
-                        }
-                    }
+            //             }
+            //         }
     
-                    .about{
-                        font-size: 0.6rem;
-                        padding: 10% 0;
-                        width: 80%;
-                        margin: 0 auto;
-                         color: slategray;
-                    }
+            //         .about{
+            //             font-size: .9rem;
+            //             padding: 10% 0;
+            //             width: 80%;
+            //             margin: 0 auto;
+            //              color: slategray;
+            //         }
     
-                    .text{
-                        font-size: .9rem;
-                        color: $primary-color;
-                        padding: 3% 0;
-                    }
+            //         .text{
+            //             font-size: .9rem;
+            //             color: $primary-color;
+            //             padding: 3% 0;
+            //         }
     
-                    .title{
-                        text-transform: capitalize;
-                        padding: 3% 0;
-                        font-size: .7rem;
-                        color: slategray;
-                    }
-                }
-            }
+            //         .title{
+            //             text-transform: capitalize;
+            //             padding: 3% 0;
+            //             font-size: .7rem;
+            //             color: slategray;
+            //         }
+            //     }
+            // }
             }
         }
     }
+
+.testimonial-carousel{
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+    height: auto;
+    background: white;
+
+    &-card{
+        display: flex;
+
+        .img{
+            width: 50%;
+        }
+
+        .text-side{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2%;
+
+            .about{
+                font-size: 1rem;
+                color: $grey-blue;
+                padding: 5% 0;
+            }
+
+            .text{
+                color: $primary-color;
+                font-size: 1.3rem;
+                padding: 5% 0;
+            }
+
+            .title{
+                color: slategrey;
+            }
+        }
+
+        
+    }
+}
+
 }

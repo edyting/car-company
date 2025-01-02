@@ -4,9 +4,9 @@ import { MdRecommend } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
 
 
-const Forth = () => {
+const RatingSection = () => {
   return (
-    <div>
+    <div> 
       <div className="forth">
         {/* verified */}
         <div className="forth_verified">
@@ -85,4 +85,4 @@ const Forth = () => {
   );
 };
 
-export default Forth;
+export default RatingSection;
