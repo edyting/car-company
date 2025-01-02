@@ -2,7 +2,7 @@
 const GetStartedSection = () => {
   return (
     <div>
-      <div className="get-started">
+      <div className="get-started">  
         <div className="text">
           <div className="heading">
             <p>We are Carsento</p>
