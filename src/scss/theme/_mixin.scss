@@ -39,7 +39,7 @@
 @mixin fade-in-why-choose-us-right (){
     animation: fadeInWhyChooseUsRight .7s linear forwards;
     animation-timeline: view();
-    animation-range: 20dvh 45dvh;
+    animation-range: 20dvh 35dvh;
     transition: all .7s linear;
 }
 
