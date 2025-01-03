@@ -1,4 +1,4 @@
-
+ 
 const HowToBuy = () => {
   return (
     <div>

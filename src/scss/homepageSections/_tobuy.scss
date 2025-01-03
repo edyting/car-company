@@ -73,7 +73,9 @@
     // bottom: 0px;
     right: 5%;
     margin-top: -3rem;
-
+   
+@include show-to-buy;
+transition: all .7s linear;
 
     .header{
         color: $primary-color;

@@ -69,3 +69,26 @@
         scale: 1;
     }
 }
+
+// to buy section
+@mixin show-to-buy (){
+    animation: ShowToBuy .7s linear forwards;
+    animation-timeline: view();
+    animation-range: 5dvh 35dvh;
+    transition: all .7s linear;
+}
+
+@keyframes showToBuy {
+    from{
+        opacity: 0;
+        scale: .7;
+        transform: translateX(10dvw);
+       
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        scale: 1;
+        
+    }
+}
