@@ -3,3 +3,69 @@
         @content
     }
 }
+
+@mixin fade-in-ratings (){
+    animation: fadeInRatings 0.7s linear forwards ;
+    animation-timeline: view();
+    animation-range: 10px 45dvh;
+    scale: .9;
+    opacity: .5;
+}
+
+
+
+// animations
+
+// for ratings section
+@keyframes fadeInRatings {
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+// for why choose us section
+
+@mixin fade-in-why-choose-us (){
+    animation: fadeInWhyChooseUsLeft .5s linear forwards;
+    animation-timeline: view();
+    animation-range: 30px 45dvh;
+    transition: all .7s ease;
+}
+
+@mixin fade-in-why-choose-us-right (){
+    animation: fadeInWhyChooseUsRight .7s linear forwards;
+    animation-timeline: view();
+    animation-range: 20dvh 45dvh;
+    transition: all .7s linear;
+}
+
+@keyframes fadeInWhyChooseUsLeft {
+    from{
+        opacity: 0;
+        scale: .7;
+        
+    }
+    to {
+        opacity: 1;
+        
+        scale: 1;
+        
+    }
+}
+
+@keyframes fadeInWhyChooseUsRight {
+    from{
+        opacity: 0;
+        scale: .7;
+        transform: translateY(-10dvw);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        scale: 1;
+    }
+}

@@ -1,3 +1,5 @@
+
+
 .nav{
     display: flex;
     justify-content: space-between;
@@ -9,7 +11,7 @@
     color: white;
     font-family: sans-serif;
     position: absolute;
-
+    transition: all .5s ease;
     &_links{
         display: flex;
         list-style-type: none;
@@ -62,12 +64,67 @@
 
 .humburger{
     padding-left: 20px;
+    
      
     .hum{
         font-size: 2rem;
+        display: none;
     }
 }
 
+// fixed navbar
+.nav.nav_scrolled{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $grey-blue;
+    padding: 15px 25px ;
+    border-bottom: 1px solid white;
+    color: white;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    transition: all .7s ease;
+    z-index: 20;
+}
+
+.nav_scrolled{
+    &_links{
+        display: flex;
+        list-style-type: none;
+        gap: 20px;
+        font-size: 1.2rem;
+
+       
+      
+
+        li a{
+            text-decoration: none;
+            color: white;
+           
+              &.active{
+                color: white;
+                font-weight: bolder;
+                
+
+                &:hover{
+                    text-decoration: underline #fff;
+                offset: 12px;
+                }
+            }
+           
+            &:hover{
+                color: #fff;
+                font-weight: bold;
+            }
+
+           
+        }
+       
+    }
+}
+ 
 
     // mobile menu
     .mobile-menu{
@@ -171,9 +228,11 @@
     
     .humburger{
         padding-left: 20px;
+        
          
         .hum{
             font-size: 2rem;
+            display: block;
         }
     }
 
@@ -188,7 +247,7 @@
         z-index: 10;
         padding-left: 20px;
         margin-top: 10dvh;
-        display: block;
+        // display: block;
 
         &_links_container{
             padding: 1rem 0;

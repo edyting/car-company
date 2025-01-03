@@ -1,13 +1,15 @@
 .forth{
     width: 100%;
     height: 30dvh;
-    background: #d0dce4b3;
+    background: $grey;
     display: flex;
     align-items: center;
     gap: 4rem;
     justify-content: center;
     margin-top: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   @include fade-in-ratings;
+   transition: all .7s linear;
    
 }
 

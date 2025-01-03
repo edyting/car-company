@@ -10,68 +10,79 @@ const Navbar = () => {
   }
 
 
+  // check if the user has scrolled the page
+  document.addEventListener("scroll", () => {
+    const scrolled = document.querySelector(".nav");
+    const active_link = document.querySelector(".active");
+    if (window.scrollY > 350) {
+      scrolled.classList.add("nav_scrolled");
+      
+    } else {
+      scrolled.classList.remove("nav_scrolled");
+      active_link.style.color = "#a1b358";
+      // active_link.style.transition = "all 0.7s ease";
+    }
+  })
+
+
+     
+
   return (
     <div>
-          {/* mobile-Menu */}
-    {
-      isClicked && (   
-   <div >
-    
-              <div className="mobile-menu">
-        <div className="mobile-menu_links_container">
+      {/* mobile-Menu */}
+      {isClicked && (
         <div>
-          <ul className=" ">
-            <li> 
-              <a className="active" href="#!">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#!">About</a>
-            </li>
-            <li>
-              <a href="#!" className="">
-                <span>Pages</span>
-                {/* drop-down-icon */}
-                <span className="">
-                  <FaAngleDown />
-                </span>
-              </a>
-            </li>
+          <div className="mobile-menu">
+            <div className="mobile-menu_links_container">
+              <div>
+                <ul className=" ">
+                  <li>
+                    <a className="active " href="#!">
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">About</a>
+                  </li>
+                  <li>
+                    <a href="#!" className="">
+                      <span>Pages</span>
+                      {/* drop-down-icon */}
+                      <span className="">
+                        <FaAngleDown />
+                      </span>
+                    </a>
+                  </li>
 
-            <li>
-              <a href="#!">Pricing</a>
-            </li>
-            <li>
-              <a href="#!">Blog</a>
-            </li>
-            <li>
-              <a href="#!">Contact</a>
-            </li>
+                  <li>
+                    <a href="#!">Pricing</a>
+                  </li>
+                  <li>
+                    <a href="#!">Blog</a>
+                  </li>
+                  <li>
+                    <a href="#!">Contact</a>
+                  </li>
 
-            <div>
-          <button className="nav_btn">Buy a Car</button>
+                  <div>
+                    <button className="nav_btn">Buy a Car</button>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-          </ul>
-
-
-        </div>
-        </div>
-      </div>
-   </div>
-)
-    }
+      )}
 
       <div className="nav">
-
         {/* menu-icon */}
         <div className="humburger" onClick={handleClicked}>
-          {isClicked?<IoClose className="hum"/>:<FaBars className="hum" />}
+          {isClicked ? <IoClose className="hum" /> : <FaBars className="hum" />}
         </div>
         {/* links-first 3 */}
         <div>
-          <ul className="nav_links ">
-            <li> 
+          <ul className="nav_links nav_scrolled_links">
+            <li>
               <a className="active" href="#!">
                 Home
               </a>
@@ -96,7 +107,7 @@ const Navbar = () => {
         </div>
         {/* links-last 3 */}
         <div>
-          <ul className="nav_links">
+          <ul className="nav_links nav_scrolled_links">
             <li>
               <a href="#!">Pricing</a>
             </li>
