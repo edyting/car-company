@@ -46,11 +46,11 @@ const HomePage = () => {
         </div>
 
         <div className="">
-          {/* <BuyYourCar /> */}
+          <BuyYourCar />
         </div>
 
         <div className="">
-          {/* <CarListing /> */}
+          <CarListing />
         </div>
 
         <div className="">
@@ -58,20 +58,20 @@ const HomePage = () => {
         </div>
 
         <div className="">
-          {/* <TestimonialSection/> */}
+          <TestimonialSection/>
         </div>
         <div className="">
-          {/* <Collaborators/> */}
+          <Collaborators/>
         </div>
         <div className="">
-          {/* <News/> */}
+          <News/>
         </div>
         <div className="">
-          {/* <GetStartedSection/> */}
+          <GetStartedSection/>
         </div>
 
         <div className="">
-          {/* <Footer/> */}
+          <Footer/>
         </div>
       </div>
     </div>

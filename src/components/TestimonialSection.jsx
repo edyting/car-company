@@ -7,8 +7,46 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css/bundle';
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "motion/react";
 
 const TestimonialSection = () => {
+
+    const rightGridVariant = {
+      hidden: {
+        opacity: 0,
+        x:-100
+      },
+      visible: {
+        opacity: 1,
+        x:0,
+        transition: {
+          staggerChildren: 0.55,
+        },
+      },
+  };
+  
+  
+  const refContainer = useRef(null);
+  const isInView = useInView(refContainer, { once: true });
+  const maincontrols = useAnimation();
+
+  const rightGridChildrenVariant = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { ease: ["easeIn"],duration:1 },
+    },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      maincontrols.start("visible");
+    }
+  }, [isInView]);
+
   const persons = [
     {
       id: 1,
@@ -52,10 +90,21 @@ const TestimonialSection = () => {
               reiciendis officiis qui harum.
             </span>
           </div>
-          <div className="right">
-            <div className="right_absolute">
+          <motion.div className="right">
+            <motion.div
+              variants={rightGridVariant}
+              initial="hidden"
+              animate={maincontrols}
+              className="right_absolute"
+              ref={refContainer}
+            >
               {persons.map((person) => (
-                <div className="card" key={person.id}>
+                <motion.div
+                  variants={rightGridChildrenVariant}
+                  transition={{ delay: 0.2 }}
+                  className="card"
+                  key={person.id}
+                >
                   <div className="img">
                     <img src={person.src} alt={person.name} />
                   </div>
@@ -68,10 +117,10 @@ const TestimonialSection = () => {
                   <div className="title">
                     <span>{person.title}</span>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* carousel */}
           <Swiper

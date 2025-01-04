@@ -71,6 +71,7 @@
     background: #ffffff;
     position: absolute;
     // bottom: 0px;
+    overflow-x: hidden;
     right: 5%;
     margin-top: -3rem;
    
@@ -100,6 +101,8 @@
         }
     }
 }
+
+
 
 @include mobile{
     .buy-your-car{

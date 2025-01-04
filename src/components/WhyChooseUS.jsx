@@ -5,11 +5,13 @@ import { GiWallet } from "react-icons/gi";
 import { FaCar } from "react-icons/fa6";
 
 //  animation with motion
-import { motion } from "motion/react";
+import { motion, useAnimation, useInView } from "motion/react";
+import { useEffect, useRef } from "react";
+
 
 const WhyChooseUS = () => {
 
-  
+   
 
   const leftTextVariant = {
     hidden: {
@@ -24,13 +26,14 @@ const WhyChooseUS = () => {
   };
 
     const rightGridVariant = {
-      hidden: {
+      hidden: { 
         opacity: 0,
       },
       visible: {
         opacity: 1,
         transition: {
-          staggerChildren: 0.25,
+          staggerChildren: 0.45,
+          delay:.5
         },
       },
     };
@@ -62,7 +65,24 @@ const WhyChooseUS = () => {
      },
    };
 
+  
+  const refContainer = useRef(null);
+  const isInView = useInView(refContainer, { once: true });
+  const maincontrols = useAnimation();
 
+  const refContainerright = useRef(null);
+  const isInViewright = useInView(refContainerright, { once: true });
+  const maincontrolsright = useAnimation();
+
+
+  useEffect(() => {
+    if (isInView) {
+      maincontrols.start("visible");
+    }
+    if (isInViewright) {
+      maincontrolsright.start("visible");
+    }
+  }, [isInView,isInViewright]);
 
   return (
     <div>
@@ -72,15 +92,17 @@ const WhyChooseUS = () => {
           <motion.div
             variants={leftTextVariant}
             initial="hidden"
-            animate="visible"
+            animate={maincontrols}
             className="text"
           >
-            <motion.p variants={leftChildrenVariant}>Why Choose Us?</motion.p>
+            <motion.p ref={refContainer} variants={leftChildrenVariant}>
+              Why Choose Us?
+            </motion.p>
             <motion.h4 variants={leftChildrenVariant}>
               To drive integrity by being honest & transparent in every
               interataction
             </motion.h4>
-            <motion.span variants={leftChildrenVariant}>
+            <motion.span variants={leftChildrenVariant} ref={refContainerright}>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
               debitis alias praesentium dolor expedita perspiciatis sequi facere
               voluptate esse iusto totam, natus ab laboriosam dolores pariatur
@@ -92,7 +114,7 @@ const WhyChooseUS = () => {
         <div className="right">
           <motion.div
             initial="hidden"
-            animate="visible"
+            animate={maincontrolsright}
             variants={rightGridVariant}
             className="items-container"
             id="container"
