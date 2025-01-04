@@ -2,14 +2,61 @@ import { MdVerifiedUser } from "react-icons/md";
 import { FaCarAlt } from "react-icons/fa";
 import { MdRecommend } from "react-icons/md";
 import { FaUsers } from "react-icons/fa6";
+import { easeOut } from "motion";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "motion/react";
 
 
 const RatingSection = () => {
+  // animation
+  const containerVariant = {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const childrenVariant = {
+    hidden: {
+      opacity: 0,
+      y: -30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    transition: {
+      duration: 0.05,
+      ease: easeOut ,
+    },
+  };
+
+  const refContainer = useRef(null);
+  const isInView = useInView(refContainer, { once: true });
+  const maincontrols = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      maincontrols.start("visible");
+    }
+  }, [isInView]);
+  
   return (
-    <div> 
-      <div className="forth">
+    <div>
+      <motion.div
+        variants={containerVariant}
+        animate={maincontrols}
+        initial="hidden"
+        className="forth"
+        ref={refContainer}
+      >
         {/* verified */}
-        <div className="forth_verified">
+        <motion.div variants={childrenVariant} className="forth_verified">
           {/* top */}
           <div className="top">
             {/* logo */}
@@ -25,9 +72,9 @@ const RatingSection = () => {
           <div className="bottom">
             <p>Verified Dealers</p>
           </div>
-        </div>
+        </motion.div>
         {/* cars for sale */}
-        <div className="cars_for_sale">
+        <motion.div variants={childrenVariant} className="cars_for_sale">
           {/* top */}
           <div className="top">
             {/* logo */}
@@ -43,9 +90,9 @@ const RatingSection = () => {
           <div className="bottom">
             <p>Cars For Sale</p>
           </div>
-        </div>
+        </motion.div>
         {/* dealers */}
-        <div className="dealers">
+        <motion.div variants={childrenVariant} className="dealers">
           {/* top */}
           <div className="top">
             {/* logo */}
@@ -61,9 +108,9 @@ const RatingSection = () => {
           <div className="bottom">
             <p>Dealers Reviews</p>
           </div>
-        </div>
+        </motion.div>
         {/* active users */}
-        <div className="active_users">
+        <motion.div variants={childrenVariant} className="active_users">
           {/* top */}
           <div className="top">
             {/* logo */}
@@ -79,8 +126,8 @@ const RatingSection = () => {
           <div className="bottom">
             <p>Active Users/day</p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

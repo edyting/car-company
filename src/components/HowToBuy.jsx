@@ -1,11 +1,30 @@
+import { easeOut } from "motion";
+import { easeIn, motion } from "motion/react";
  
 const HowToBuy = () => {
+
+  const toBuyVariant = {
+    hidden: {
+      opacity: 0,
+      y:100,
+    },
+    visible: {
+      opacity: 1,
+      y:0,
+    }
+  }
+
   return (
     <div>
-      <div className="to_buy">
+      <motion.div
+        variants={toBuyVariant}
+        initial="hidden"
+        animate="visible"
+        transition={{duration:0.5,ease:easeOut ,delay:0.2 }}
+        className="to_buy">
         {/* header */}
         <div className="header"> 
-          <p>How to Buy</p>
+          <p>How to Buy</p> 
         </div>
         <div className="flex-container">
           <div className="left">
@@ -17,7 +36,7 @@ const HowToBuy = () => {
             </span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div> 
   );
 }

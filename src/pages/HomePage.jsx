@@ -19,26 +19,26 @@ const HomePage = () => {
     <div>
       <div className="conatiner">
         <div className="">
-          {/* <Navbar /> */}
+          <Navbar />
         </div>
         <div className="">
-          {/* <HeroSection /> */}
+          <HeroSection />
         </div>
 
         <div className="">
-          {/* <Search /> */}
+          <Search />
         </div>
         {/* second section is just a white space */}
         <div className="">
-          {/* <SecondSection /> */}
+          <SecondSection />
         </div>
 
         <div className="">
-          {/* <AllCarSection/> */}
+          <AllCarSection/>
         </div>
 
         <div className="">
-          {/* <RatingSection/> */}
+          <RatingSection/>
         </div>
 
         <div className="">
@@ -54,7 +54,7 @@ const HomePage = () => {
         </div>
 
         <div className="">
-          {/* <BuyYourCarSection/> */}
+          <BuyYourCarSection/>
         </div>
 
         <div className="">

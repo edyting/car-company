@@ -7,6 +7,10 @@ import { GoStack } from "react-icons/go";
 import { IoCalculatorOutline } from "react-icons/io5";
 import { GrNotes } from "react-icons/gr";
 
+// animation
+import { motion } from "motion/react";
+import { easeOut } from "motion";
+
 const BuyYourCarSection = () => {
     const qualities = [
       {
@@ -45,32 +49,61 @@ const BuyYourCarSection = () => {
         title: "Easily upload your document",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, expedita.",
       },
-    ];
+  ];
+  
+  // animation variants
+  const gridContainerVaraints = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.35,
+        ease: easeOut,
+      },
+    },
+  };
+
+   const gridItemsVaraints = {
+     hidden: {
+       opacity: 0,
+     },
+     visible: {
+       opacity: 1,
+     },
+   };
+
+
 
   return (
     <div className="relative">
-          <div className="buy-your-car">
-              <HowToBuy />
-              <div className="second">
-                  <div className="second_container">
-                      {qualities.map((item) => (
-                          <div className="grid_layout_item" key={item.id}>
-                              <div className="top">
-                                  {item.icon}
-                              </div>
-                              <div className="title">
-                                  {item.title}
-                              </div>
-                              <div className="text">
-                                  {item.text}
-                              </div>
-                          </div>
-                      ))}
-                </div>
-              </div>
+      <div className="buy-your-car">
+        <HowToBuy />
+        <div className="second">
+          <motion.div
+            variants={gridContainerVaraints}
+            initial="hidden"
+            animate="visible"
+            className="second_container"
+          >
+            {qualities.map((item) => (
+              <motion.div
+                variants={gridItemsVaraints}
+                
+                className="grid_layout_item"
+                key={item.id}
+              >
+                <div className="top">{item.icon}</div>
+                <div className="title">{item.title}</div>
+                <div className="text">{item.text}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default BuyYourCarSection

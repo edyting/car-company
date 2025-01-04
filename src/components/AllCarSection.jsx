@@ -6,7 +6,9 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css/bundle";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation, useInView } from "motion/react";
+import { easeOut } from "motion";
 
 
 
@@ -51,22 +53,75 @@ const AllCarSection = () => {
       alt: "car",
     },
   ];
+// animation
+  const containerVariant = {
+    hidden: {
+      opacity: 1,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const childrenVariant = {
+    hidden: {
+      opacity: 0,
+      y: 74,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    transition: {
+      duration: 0.05,
+      ease: easeOut
+    }
+  };
+
+  const refContainer = useRef(null);
+  const isInView = useInView(refContainer, { once: true });
+  const maincontrols = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      maincontrols.start("visible");
+    }
+  },[isInView])
+  
   return (
     <div>
-      <div className="third">
-        <div className="third_small">
+      <motion.div
+        variants={containerVariant}
+        animate={maincontrols}
+        initial="hidden"
+        className="third"
+        ref={refContainer}
+      >
+        <motion.div
+          variants={childrenVariant}
+          className="third_small"
+        >
           <p>All Car</p>
-        </div>
-        <div className="third_large">
+        </motion.div>
+        <motion.div
+          variants={childrenVariant}
+          className="third_large"
+        >
           <h2>Leading Dealer in New and Used Car</h2>
-        </div>
-        <div className="third_paragraph">
+        </motion.div>
+        <motion.div
+          variants={childrenVariant}
+          className="third_paragraph"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
             temporibus voluptatem aliquid dolores enim sed nostrum esse
             repudiandae quaerat numquam.
           </p>
-        </div>
+        </motion.div>
         {/* carousel */}
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -75,24 +130,22 @@ const AllCarSection = () => {
           navigation
           pagination={{ clickable: true }}
           // scrollbar={{ draggable: true }}
-        className="slide-card-container"
+          className="slide-card-container"
         >
-        
           {cars.map((car) => (
-            
-              <div className="slide-card" key={car.id}>
-                <SwiperSlide>
+            <div
+              
+              className="slide-card"
+              key={car.id}
+            >
+              <SwiperSlide>
                 <img src={car.src} className="slide-img" alt={car.alt} />
-                
-                </SwiperSlide>
-              </div>
-            
+              </SwiperSlide>
+            </div>
           ))}
-       
         </Swiper>
         {/* carousel */}
-      
-      </div>
+      </motion.div>
     </div>
   );
 };

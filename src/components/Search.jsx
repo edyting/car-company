@@ -1,8 +1,26 @@
+import { easeIn, motion } from "motion/react";
 
-const Search = () => {
+const Search = () => { 
+
+  const searchVariant = {
+    hidden: {
+      opacity: 0,
+      scale:.9,
+    },
+    visible: {
+      opacity: 1,
+      scale:1
+    }
+  }
+  
   return (
     <div>
-      <div className="search_container">
+      <motion.div
+        variants={searchVariant}
+        initial="hidden"
+        animate="visible"
+        transition={{delay:.3,duration:1,ease:easeIn}}
+        className="search_container">
         <div className="search_container_text">
           Search the car you want, your way
         </div>
@@ -43,7 +61,7 @@ const Search = () => {
               </button>
             </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 }
