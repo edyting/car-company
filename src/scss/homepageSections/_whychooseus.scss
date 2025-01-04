@@ -15,6 +15,7 @@
         // background-size: 35rem;
         padding-top: 5%;
 
+
         
 
         .text{
@@ -23,9 +24,9 @@
             // background: brown;
             margin-left: 8rem;
             overflow: hidden;
-             @include fade-in-why-choose-us;
-        transition: all .5s linear;
-            
+            overflow-y: hidden;
+            padding: 1%;
+        
 
             p{
                 color: $primary-color;
@@ -51,8 +52,7 @@
         padding-top: 12%;
         padding-right: 8%;
         // overflow: hidden;
-        @include fade-in-why-choose-us-right;
-        transition: all .5s linear;
+        
 
         #container{
             width: 100%;
